@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JMC Cinema</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/modal.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+    <!-- Material design favicon -->
+</head>
+
+<body class="bgcolor_offwhite">
+    <!-- Outside of main container to avoid bootstrap container styling -->
+    <div id="loginbox" class="modal">
+        <form class="modal_content animate_modal" action="action_page.php" method="post">
+            <div class="modal_container">
+                <label class="txt_headerinput" for="luser_name">Username</label>
+                <input class="modal_input" type="text" placeholder="Enter Username" id="luser_name" name="luser_name" required>
+                <label class="txt_headerinput" for="flpassword">Password</label>
+                <input class="modal_input" type="password" placeholder="Enter Password" id="flpassword" name="flpassword" required>
+                <label>
+                    <input class="modal_input" type="checkbox" checked="checked" id="remember_box" name="lremember"> Remember me
+                </label>
+                <button class="modal_btn" type="submit">Log In</button>
+                <center><a href="recover_password_form.html"> Forgot password? </a></center>
+            </div>
+        </form>
+    </div>
+    <div id="signup" class="modal">
+        <form class="modal_content animate_modal" action="action_page_signup.php" method="post">
+            <div class="modal_container">
+                <label class="txt_headerinput" for="email">Email</label>
+                <input class="modal_input" type="email" placeholder="Enter Email" id="email" name="email" required>
+                <label class="txt_headerinput" for="user_name">Username</label>
+                <input class="modal_input" type="text" placeholder="Enter Username" id="user_name" name="username" required>
+                <label class="txt_headerinput" for="fpassword">Password</label>
+                <input class="modal_input" type="password" placeholder="Enter Password" id="fpassword" name="fpassword" required>
+                <label class="txt_headerinput" for="rpassword">Retype password</label>
+                <input class="modal_input" type="password" placeholder="Retype Password" id="rpassword" name="rpassword" required>
+                <label>
+                    <input class="modal_input" type="checkbox" checked="checked" id="remember_box" name="remember"> Remember me
+                </label>
+                <button class="modal_btn" type="submit">Sign Up</button>
+            </div>
+        </form>
+    </div>
+    <div id="bookingbox" class="modal">
+        <form class="modal_content animate_modal" action="action_page_booking.php" method="post">
+            <div class="modal_container">
+                <label class="txt_headerinput" for="rtime">Requested time</label>
+                <select class="modal_input_select" name="time" id="rtime">
+                    <option>1:30 PM</option>
+                    <option>3:00 PM</option>
+                    <option>6:00 PM</option>
+                    <option>10:30 PM</option>
+                </select>
+                <button class="modal_btn" type="submit">Proceed</button>
+                <button onclick="fclear()" class="modal_btn_red" type="Reset">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <div class="main container bgcolor_white pl-0 pr-0 mt-2 shadow-sm">
+        <nav class="navbar navbar-expand bgcolor_lgrey">
+            <a class="pl-3 navbar-brand txt_logo" href="index.html">JMC Cinema</a>
+            <form class="form-inline">
+                <i class="d-none d-xl-block d-md-block d-lg-block fa fa-search pl-1 pr-2"></i>
+                <input class="form-control" type="search" placeholder="Search..." name="search" id="search"></input>
+            </form>
+            <button class="signup_btnnav" onclick="signup()">Sign Up</button>
+            <button class="login_btnnav" onclick="login()">Log In</button>
+        </nav>
+        <div class="header row">
+            <h1 class="txt_header col-md-12 col-sm-12 col-lg-12 pl-5 pt-5 pb-1"> Latest movies </h1>
+        </div>
+
+        <div class="pl-5 row">
+            <div class="cover shadow col-md-3 col-lg-2 col-sm-4 card pl-0 mt-2 mr-3 pr-0">
+                <a href="movie.html"> <img class="pl-0 ml-0 cover" height="250" width="200" src="images/dora.jpg"> </a>
+                <div class="card-body">
+                    <h1 class="txt_cardtitle css_marquee"><a class="txtcolor_black" href="movie.html"><span>Dora And The Lost City of Gold</span></a></h1>
+                    <p class="card-text">Action & adventure</p>
+                    <p class="card-text"><small class="text-muted">3.5 <span><i class="fa fa-star"></i></span></small></p>
+                </div>
+            </div>
+            <div class="cover shadow col-md-3 col-lg-2 col-sm-4 card pl-0 mt-2 mr-3 pr-0">
+                <a href="movie.html"> <img class="pl-0 ml-0 cover" height="250" width="200" src="images/1917.jpg"> </a>
+                <div class="card-body">
+                    <h1 class="txt_cardtitle css_marquee_none"><a class="txtcolor_black" href="movie.html"><span>1917</span></a></h1>
+                    <p class="card-text">Drama & Action</p>
+                    <p class="card-text"><small class="text-muted">4.4 <span><i class="fa fa-star"></i></span></small></p>
+                </div>
+            </div>
+            <div class="cover shadow col-md-3 col-lg-2 col-sm-4 card pl-0 mt-2 mr-3 pr-0">
+                <a href="movie.html"> <img class="pl-0 ml-0 cover" height="250" width="200" src="images/badboys.jpg"> </a>
+                <div class="card-body">
+                    <h1 class="txt_cardtitle css_marquee_short"><a class="txtcolor_black" href="movie.html"><span>Bad boys for life</span></a></h1>
+                    <p class="card-text">Thriller & Crime</p>
+                    <p class="card-text"><small class="text-muted">3.9 <span><i class="fa fa-star"></i></span></small></p>
+                </div>
+            </div>
+            <div class="cover shadow col-md-3 col-lg-2 col-sm-4 card pl-0 mt-2 mr-3 pr-0 d-none d-xl-block d-lg-block">
+                <a href="movie.html"> <img class="pl-0 ml-0 cover" height="250" width="200" src="images/dolittle.jpg"> </a>
+                <div class="card-body">
+                    <h1 class="txt_cardtitle css_marquee_none"><a class="txtcolor_black" href="movie.html"><span>Dolittle</span></a></h1>
+                    <p class="card-text">Fantasy & Action</p>
+                    <p class="card-text"><small class="text-muted">3.6 <span><i class="fa fa-star"></i></span></small></p>
+                </div>
+            </div>
+            <div class="cover shadow col-md-3 col-lg-2 col-sm-4 card pl-0 mt-2 mr-3 pr-0 d-none d-xl-block d-lg-block">
+                <a href="movie.html"> <img class="pl-0 ml-0 cover" height="250" width="200" src="images/frozen.jpg"> </a>
+                <div class="card-body">
+                    <h1 class="txt_cardtitle css_marquee_none"><a class="txtcolor_black" href="movie.html"><span>Frozen 2</span></a></h1>
+                    <p class="card-text">Drama & Fantasy</p>
+                    <p class="card-text"><small class="text-muted">4.4 <span><i class="fa fa-star"></i></span></small></p>
+                </div>
+            </div>
+            <div class="d-none d-xl-block col-lg-1 pt-5">
+                <div class="col-lg-1 pt-5 d-sm-none d-md-block d-none d-xl-block">
+                    <img onclick="movieAction()" class="right_icon d-none d-xl-block css_pointer_onimg" src="images/kb_ra.png">
+                </div>
+            </div>
+            <div class="cover shadow col-md-3 col-lg-2 col-sm-4 card pl-0 mt-2 mr-3 pr-0">
+                <a href="movie.html"> <img class="pl-0 ml-0 cover" height="250" width="200" src="images/gentlemen.jpg"> </a>
+                <div class="card-body">
+                    <h1 class="txt_cardtitle css_marquee_none"><a class="txtcolor_black" href="movie.html"><span>The Gentlemen</span></a></h1>
+                    <p class="card-text">Crime & Action</p>
+                    <p class="card-text"><small class="text-muted">4.5 <span><i class="fa fa-star"></i></span></small></p>
+                </div>
+            </div>
+            <div class="cover shadow col-md-3 col-lg-2 col-sm-4 card pl-0 mt-2 mr-3 pr-0">
+                <a href="movie.html"> <img class="pl-0 ml-0 cover" height="250" width="200" src="images/stampede.jpg"> </a>
+                <div class="card-body">
+                    <h1 class="txt_cardtitle css_marquee_med"><a class="txtcolor_black" href="movie.html"><span>One Piece Stampede</span></a></h1>
+                    <p class="card-text">Fantasy & Action</p>
+                    <p class="card-text"><small class="text-muted">4 <span><i class="fa fa-star"></i></span></small></p>
+                </div>
+            </div>
+            <div class="cover shadow col-md-3 col-lg-2 col-sm-4 card pl-0 mt-2 mr-3 pr-0">
+                <a href="movie.html"> <img class="pl-0 ml-0 cover" height="250" width="200" src="images/justmercy.jpg"> </a>
+                <div class="card-body">
+                    <h1 class="txt_cardtitle css_marquee_none"><a class="txtcolor_black" href="movie.html"><span>Just Mercy</span></a></h1>
+                    <p class="card-text">Drama & adventure</p>
+                    <p class="card-text"><small class="text-muted">3 <span><i class="fa fa-star"></i></span></small></p>
+                </div>
+            </div>
+            <div class="cover shadow col-md-3 col-lg-2 col-sm-4 card pl-0 mt-2 mr-3 pr-0 d-none d-xl-block d-lg-block">
+                <a href="movie.html"> <img class="pl-0 ml-0 cover" height="250" width="200" src="images/jojorabbit.jpg"> </a>
+                <div class="card-body">
+                    <h1 class="txt_cardtitle css_marquee_none"><a class="txtcolor_black" href="movie.html"><span>Jojo Rabbit</span></a></h1>
+                    <p class="card-text">Comedy-drama</p>
+                    <p class="card-text"><small class="text-muted">3.5 <span><i class="fa fa-star"></i></span></small></p>
+                </div>
+            </div>
+            <div class="cover shadow col-md-3 col-lg-2 col-sm-4 card pl-0 mt-2 mr-3 pr-0 d-none d-xl-block d-lg-block">
+                <a href="movie.html"> <img class="pl-0 ml-0 cover" height="250" width="200" src="images/weathering.jpg"> </a>
+                <div class="card-body">
+                    <h1 class="txt_cardtitle css_marquee_med"><a class="txtcolor_black" href="movie.html"><span>Weathering with you</span></a></h1>
+                    <p class="card-text">Fantasy & Disaster</p>
+                    <p class="card-text"><small class="text-muted">4.8 <span><i class="fa fa-star"></i></span></small></p>
+                </div>
+            </div>
+            <div class="d-none d-xl-block col-lg-1 pt-5">
+                <div class="col-lg-1 pt-5 d-sm-none d-md-block d-none d-xl-block">
+                    <img onclick="movieAction()" class="right_icon d-none d-xl-block css_pointer_onimg" src="images/kb_ra.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="header row">
+            <h1 class="txt_header col-md-12 col-sm-12 col-lg-12 pl-5 pt-5 pb-1"> Featured </h1>
+        </div>
+        <div class="row pl-5">
+            <div class="col-xl-2 col-lg-3 col-md-3 col-sm-3 shadow pl-0 mr-0 pr-0">
+                <a href="movie.html"> <img class="pl-0 pr-0 cover float_right" height="370" width="250" src="images/martian.jpg"> </a>
+            </div>
+            <div class="col-xl-9 col-lg-8 col-md-8 col-sm-11 shadow meta_featured">
+                <br>
+                <div class="row">
+                    <h1 class="txt_cardtitle_featured pl-4 ml-2 col-xl-11 col-lg-11 col-md-11 col-sm-11">THE MARTIAN</h1>
+                </div>
+                <p class="card-text"><small class="col-xl-2 featured_runtime ml-3 col-md-1 col-sm-1 text-muted">2015 | 151 mins | 4.5 <span><i class="fa fa-star"></i></span></small></p>
+                <p class="txt_featured ml-4 pr-3">When astronauts blast off from the planet Mars, they leave behind Mark Watney (Matt Damon), presumed dead after a fierce storm. With only a meager amount of supplies, the stranded visitor must utilize his wits and spirit to find a way to survive on the hostile planet. Meanwhile, back on Earth, members of NASA and a team of international scientists work tirelessly to bring him home, while his crew mates hatch their own plan for a daring rescue mission.</p>
+                <center>
+                    <button onclick="movieAction()" class="ticket_btn rounded mr-1 mb-1 shadow"><span><img src="images/play_arrow-24px.png"></img></span>WATCH TRAILER</button>
+                    <button onclick="booking()" class="ticket_btn rounded ml-1 mb-1 shadow">BOOK TICKETS</button>
+                </center>
+            </div>
+        </div>
+        <div class="whitefill"></div>
+        <footer class="bgcolor_lgrey">
+            <div class="pt-5 pb-5 pl-5">
+                <div class="pl-1">
+                    <ul class="nobullets">
+                        <li><a class="txtcolor_darkblue" href="legal.html"> Legal </a></li>
+                        <li><a class="txtcolor_darkblue" href="contact.html"> Contact us </a></li>
+                        <li><a class="txtcolor_darkblue" href="aboutus.html"> About us </a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <header class="navbar"></header>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/nj.js"></script>
+</body>
+
+</html>

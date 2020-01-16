@@ -1,0 +1,224 @@
+/* Styling */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+small{
+    cursor: default;
+}
+p {
+    cursor: default;
+}
+.flex_this{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cover{
+    height: auto;
+    max-width: 100%;
+}
+.nobullets{
+    list-style-type: none;
+}
+.force_float{
+    float: right;
+}
+.right_icon{
+    height: 75px;
+    width: auto;
+}
+.whitefill{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.force_float_r{
+    float: right;
+}
+.force_float_l{
+    float: left;
+}
+.meta_featured{
+    z-index: 0;
+}
+.ticket_btn{
+    padding: 6px 6px 6px 6px;
+    background-color: #9548ec;
+    color: #e0cdf8;
+    border: 0;
+}
+/* Txt and bg */
+.txt_footer{
+    font_family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+.txt_cardtitle{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: 0.25px;
+}
+.txt_cardtitle_featured{
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 0.20px;
+}
+.headertxt{
+    font-family: 'Roboto', sans-serif;
+}
+.txt_header{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
+.txt_header_admin{
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    font-weight: bolder;
+}
+.txt_logo{
+    font-size: 6px;
+    color: #000000;
+}
+.txtcolor_black{
+    text-decoration: none;
+    color: #000000;
+}
+.txtcolor_darkblue{
+    color: #003380;
+}
+.txtcolor_red{
+    color: #a9301d;
+}
+.txt_price{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+.txt_featured{
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bgcolor_lgrey{
+    background-color: #ebebeb;
+}
+.bgcolor_white{
+    background-color: #ffffff;
+}
+.bgcolor_offwhite{
+    background-color: #f7f7f7;
+}
+.txt_headerinput{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+.featured_runtime{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+.year_box{
+    position: flex;
+    border: 0;
+    padding: 0;
+    flex: 1;
+    background-color: #3edcf5;
+    font-size: 16px;
+    text-align: center;
+}
+/* css animations */
+.css_marquee_none{
+    width: auto;
+    height: 30px;
+    overflow: hidden;
+    line-height: 30px;
+    position: relative;
+}
+.css_marquee{
+    width: auto;
+    height: 30px;
+    overflow: hidden;
+    line-height: 30px;
+    position: relative;
+}
+.css_marquee span{
+    position: absolute;
+    white-space: nowrap;
+    transform: translateX(0);
+    transition: 2s;
+}
+.css_marquee:hover span{
+    transform: translateX(calc(0px - 175px));
+}
+.css_marquee_short{
+    width: auto;
+    height: 30px;
+    overflow: hidden;
+    line-height: 30px;
+    position: relative;
+}
+.css_marquee_short span{
+    position: absolute;
+    white-space: nowrap;
+    transform: translateX(0);
+    transition: 2s;
+}
+.css_marquee_short:hover span{
+    transform: translateX(calc(0px - 50px));
+}
+.css_marquee_med{
+    width: auto;
+    height: 30px;
+    overflow: hidden;
+    line-height: 30px;
+    position: relative;
+}
+.css_marquee_med span{
+    position: absolute;
+    white-space: nowrap;
+    transform: translateX(0);
+    transition: 2s;
+}
+.css_marquee_med:hover span{
+    transform: translateX(calc(0px - 75px));
+}
+.css_pointer_onimg:hover{
+    cursor: pointer;
+}
+/* Temporary testing classes */
+.bgcolor_red {
+    background-color: red;
+}
+.bgcolor_blue{
+    background-color: blue;
+}
+
+/* Search bar css with code inspired from codepen */
+.search_container {
+    display: inline-flex;
+    flex: 1 1 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.search_icon {
+    padding: 0.5rem;
+}
+.search_box {
+    border: 0;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    flex: 1;
+}
+.search_button {
+    background: #538AC5;
+    border: 0;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0;
+}

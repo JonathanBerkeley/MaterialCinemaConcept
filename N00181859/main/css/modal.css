@@ -1,0 +1,141 @@
+/* Code inspired by w3schools code - https://www.w3schools.com/ */
+/* Everything in here relates in some way to the modal login and signup system */
+
+/* Full-width input fields */
+input[type=text].modal_input, input[type=password].modal_input, input[type=email]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+.modal_input_select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+.modal_btn{
+    background-color: #4CAF50;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 100%;
+}
+
+.modal_btn_red{
+    background-color: #dc3545;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+.modal_btn:hover {
+    opacity: 0.9;
+}
+
+.modal_container {
+    padding: 20px;
+}
+
+@media (min-width:768px){
+    .login_btnnav{
+        border-radius: 5px;
+        background-color: #a1a1a1;
+        color: black;
+        position: absolute;
+        right: 115px;
+        padding: 2px 10px 2px 10px;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+    }
+    .signup_btnnav{
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: black;
+        position: absolute;
+        right: 190px;
+        padding: 2px 10px 2px 10px;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+    }
+}
+@media (max-width:768px){
+    .login_btnnav{
+        z-index: 1;
+        position: absolute;
+        border-radius: 5px;
+        background-color: #a1a1a1;
+        color: black;
+        display: center;
+        right: 115px;
+        padding: 2px 10px 2px 10px;
+        margin: 55px 0px 0px 0px;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+    }
+    .signup_btnnav{
+        z-index: 1;
+        position: absolute;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: black;
+        display: center;
+        right: 200px;
+        margin: 55px 0px 0px 0px;
+        padding: 2px 10px 2px 10px;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+    }
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Allows user to scroll while window is still up */
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal_content {
+    max-width: 100%;
+    background-color: white;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 400px;
+}
+
+/* Add animation when appearing */
+.animate_modal {
+    -webkit-animation: animatezoom 0.75s;
+    animation: animatezoom 0.75s;
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}

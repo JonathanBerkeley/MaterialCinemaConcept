@@ -1,0 +1,41 @@
+!!!!!!!!!!!!!!!!!!!!
+----Instructions----
+!!!!!!!!!!!!!!!!!!!!
+
+Titles that overflow from the card on the homepage will scroll responsively depending on the title length when hovering over using CSS3
+(Hover over long titles with mouse and the title will scroll based on it's size)
+
+Login and signup page (form pages) are not individual pages but instead modal. Using javascript and CSS3.
+(Click on sign up/log in buttons on index.html to bring up these forms)
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+----Comments and credits----
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Arrow sliders on homepage would (probably) require a movie database to function properly. 
+Instead I linked clicking them to running a javascript function to prove the concept.
+
+Designed with mobile compatibility in mind, less movies show per row on smaller screens, arrow sliders disappear on smaller screens login and signup
+buttons become detached to just under the navbar on particularly small screens (using CSS3 media tags).
+
+Design roughly follows inital sketchups, with improvements made along the way to the design.
+
+Uses FontAwesome, JQuery, Material Design Bootstrap and Bootstrap 4 as libraries/imports.
+
+Dashboard and table page are merged into one page, the admin page.
+
+Star icon from font-awesome, all other icons are from https://material.io/resources/icons/ (including favicon)
+
+Uses labels and semantic tags. (Apart from section tag, uses div instead)
+
+Checked for compatibility with many browsers. Works on Firefox, Opera, Chrome, Chromium, Chrome Canary, Brave Browser. 
+Will not work as intended on Internet Explorer. Couldn't test on Safari or Edge (I use Windows 7).
+
+
+!!!!!!!!!!!!!!!!!!
+----MOOD BOARD----
+!!!!!!!!!!!!!!!!!!
+
+https://projects.invisionapp.com/boards/NF3XA8T9Z2M/
+(Same one as was previously submitted)
